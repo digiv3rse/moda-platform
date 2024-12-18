@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative h-[70vh] overflow-hidden">
       <Image
-        src="/runways.webp"
+        src="/runways.jpg"
         alt="Fashion model on runway"
         layout="fill"
         objectFit="cover"

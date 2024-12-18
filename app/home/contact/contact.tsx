@@ -26,13 +26,17 @@ export default function ContactPage() {
   const [message, setMessage] = useState(false);
   // Please update the Access Key in the Sanity CMS - Site Congig Page
   const apiKey = "74760719-1303-45b7-aafa-fd7b84ae4795";
+  const formName = "DiGi Moda";
+  const formSubject = "New Contact Message from DiGi Moda";
+  const formEmail = "support@digimoda.xyz";
+  const formPhone = "+855 NA";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
-    from_name: "DiGi Moda",
-    subject: "New Contact Message from DiGi Moda",
-    email: "support@digimoda.xyz",
-    phone: "+855 NA",
+    from_name: formName,
+    subject: formSubject,
+    email: formEmail,
+    phone: formPhone,
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setMessage(msg);

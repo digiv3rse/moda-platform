@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Container from "@/components/container";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (

@@ -10,7 +10,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 
-export default function ContactPage({ settings }) {
+export default function ContactPage() {
   const {
     register,
     handleSubmit,
@@ -25,15 +25,14 @@ export default function ContactPage({ settings }) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
   // Please update the Access Key in the Sanity CMS - Site Congig Page
-  const apiKey = w3ckey || "74760719-1303-45b7-aafa-fd7b84ae4795";
+  const apiKey = "74760719-1303-45b7-aafa-fd7b84ae4795";
 
   const { submit: onSubmit } = useWeb3Forms({
     access_key: apiKey,
-    settings: {
-      from_name: "DiGi Moda",
-      subject: "New Contact Message from DiGi Moda",
-      email: "support@digimoda.xyz",
-    },
+    from_name: "DiGi Moda",
+    subject: "New Contact Message from DiGi Moda",
+    email: "support@digimoda.xyz",
+    phone: "+855 NA",
     onSuccess: (msg, data) => {
       setIsSuccess(true);
       setMessage(msg);
@@ -69,16 +68,16 @@ export default function ContactPage({ settings }) {
               <MapPinIcon className="h-4 w-4" />
               <span>Phnom Penh, Cambodia</span>
             </div>
-            {settings?.email && (
+            {email?.email && (
               <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
                 <EnvelopeIcon className="h-4 w-4" />
-                <a href={`mailto:${settings.email}`}>{settings.email}</a>
+                <a href={`mailto:${email}`}>{email}</a>
               </div>
             )}
-            {settings?.phone && (
+            {phone?.phone && (
               <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
                 <PhoneIcon className="h-4 w-4" />
-                <a href={`tel:${settings.phone}`}>{settings.phone}</a>
+                <a href={`tel:${phone}`}>{phone}</a>
               </div>
             )}
           </div>

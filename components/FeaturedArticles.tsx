@@ -8,6 +8,7 @@ const articles = [
 
 export default function FeaturedArticles() {
   return (
+    <>
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Featured Articles</h2>
@@ -31,6 +32,6 @@ export default function FeaturedArticles() {
         </div>
       </div>
     </section>
+    </>
   )
 }
-

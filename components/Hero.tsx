@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   return (
+    <>
     <section className="relative h-[70vh] overflow-hidden">
       <Image
         src="/runways.jpg"
@@ -22,5 +23,6 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    </>
   )
 }

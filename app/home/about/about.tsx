@@ -68,9 +68,9 @@ export default function AboutPage() {
                 the fashion landscape.
               </p>
               <p className="mb-4 text-lg text-gray-700">
-                Since our launch, we've been at the forefront of digital fashion
+                Since our launch, we&apos;ve been at the forefront of digital fashion
                 journalism, bringing our readers exclusive content, virtual
-                fashion shows, and in-depth analyses of the industry's digital
+                fashion shows, and in-depth analyses of the industry&apos;s digital
                 transformation.
               </p>
             </section>

@@ -10,13 +10,6 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 
-interface settings {
-  access_key: String,
-  from_name: String,
-  subject: String,
-  email: String,
-  phone: String,
-}
 export default function ContactPage() {
   const {
     register,

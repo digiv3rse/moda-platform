@@ -7,7 +7,7 @@ import useWeb3Forms from "@web3forms/react";
 import {
   MapPinIcon,
   EnvelopeIcon,
-  PhoneIcon
+  PhoneIcon,
 } from "@heroicons/react/24/outline";
 
 export default function ContactPage({ settings }) {
@@ -18,9 +18,9 @@ export default function ContactPage({ settings }) {
     watch,
     control,
     setValue,
-    formState: { errors, isSubmitSuccessful, isSubmitting }
+    formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm({
-    mode: "onTouched"
+    mode: "onTouched",
   });
   const [isSuccess, setIsSuccess] = useState(false);
   const [message, setMessage] = useState(false);
@@ -32,7 +32,7 @@ export default function ContactPage({ settings }) {
     settings: {
       from_name: "DiGi Moda",
       subject: "New Contact Message from DiGi Moda",
-      email: "support@digimoda.xyz"
+      email: "support@digimoda.xyz",
     },
     onSuccess: (msg, data) => {
       setIsSuccess(true);
@@ -42,12 +42,12 @@ export default function ContactPage({ settings }) {
     onError: (msg, data) => {
       setIsSuccess(false);
       setMessage(msg);
-    }
+    },
   });
 
   return (
     <Container>
-      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight lg:text-4xl lg:leading-snug dark:text-white">
         Contact
       </h1>
       <div className="text-center">
@@ -60,8 +60,8 @@ export default function ContactPage({ settings }) {
             Contact DiGi Moda
           </h2>
           <p className="mt-5 max-w-sm">
-            Have something to say? We are here to help. Fill up the
-            form or send email or call phone.
+            Have something to say? We are here to help. Fill up the form or send
+            email or call phone.
           </p>
 
           <div className="mt-5">
@@ -72,9 +72,7 @@ export default function ContactPage({ settings }) {
             {settings?.email && (
               <div className="text-dark-600 mt-2 flex items-center space-x-2 dark:text-gray-400">
                 <EnvelopeIcon className="h-4 w-4" />
-                <a href={`mailto:${settings.email}`}>
-                  {settings.email}
-                </a>
+                <a href={`mailto:${settings.email}`}>{settings.email}</a>
               </div>
             )}
             {settings?.phone && (
@@ -92,7 +90,8 @@ export default function ContactPage({ settings }) {
               id=""
               className="hidden"
               style={{ display: "none" }}
-              {...register("botcheck")}></input>
+              {...register("botcheck")}
+            ></input>
 
             <div className="mb-5">
               <input
@@ -106,7 +105,7 @@ export default function ContactPage({ settings }) {
                 }`}
                 {...register("name", {
                   required: "Full name is required",
-                  maxLength: 80
+                  maxLength: 80,
                 })}
               />
               {errors.name && (
@@ -135,8 +134,8 @@ export default function ContactPage({ settings }) {
                   required: "Enter your email",
                   pattern: {
                     value: /^\S+@\S+$/i,
-                    message: "Please enter a valid email"
-                  }
+                    message: "Please enter a valid email",
+                  },
                 })}
               />
               {errors.email && (
@@ -156,7 +155,7 @@ export default function ContactPage({ settings }) {
                     : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white"
                 }`}
                 {...register("message", {
-                  required: "Enter your Message"
+                  required: "Enter your Message",
                 })}
               />
               {errors.message && (
@@ -169,24 +168,28 @@ export default function ContactPage({ settings }) {
 
             <button
               type="submit"
-              className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black ">
+              className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black "
+            >
               {isSubmitting ? (
                 <svg
                   className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 24 24">
+                  viewBox="0 0 24 24"
+                >
                   <circle
                     className="opacity-25"
                     cx="12"
                     cy="12"
                     r="10"
                     stroke="currentColor"
-                    strokeWidth="4"></circle>
+                    strokeWidth="4"
+                  ></circle>
                   <path
                     className="opacity-75"
                     fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path>
                 </svg>
               ) : (
                 "Send Message"

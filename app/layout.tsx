@@ -5,10 +5,9 @@ import { Providers } from "./providers";
 import { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
-const title =
-  "DiGi Moda – Digital Fashion Magazine.";
+const title = "DiGi Moda – Digital Fashion Magazine.";
 const description =
-  "DiGi Moda - Stay ahead of the game with our latest updates, trend reports, and insider tips. Join our fashion-forward community and let's explore the glamorous side of life!",
+  "DiGi Moda - Stay ahead of the game with our latest updates, trend reports, and insider tips. Join our fashion-forward community and let's explore the glamorous side of life!";
 const image = "https://digimoda.xyz/thumbnail.png";
 
 export const metadata: Metadata = {

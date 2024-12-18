@@ -1,4 +1,4 @@
-import AboutPage from "./contact";
+import AboutPage from "./about";
 
 export default async function About() {
   return <AboutPage />;

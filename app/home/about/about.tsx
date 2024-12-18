@@ -7,8 +7,7 @@ import Container from "@/components/container";
 
 export default function AboutPage() {
   return (
-    <>
-      <Container>
+    <Container>
         <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 px-4 py-12 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -94,6 +93,5 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </Container>
-    </>
   );
 }

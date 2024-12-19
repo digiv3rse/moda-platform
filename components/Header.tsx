@@ -9,8 +9,8 @@ export default function Header() {
           <Link href="/" className="block p-2">
             <Image
               src="/logo.svg"
-              width={24}
-              height={24}
+              width={130}
+              height={130}
               alt="Logo"
               className="object-cover"
             />

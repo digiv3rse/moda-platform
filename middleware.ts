@@ -54,7 +54,7 @@ export default async function middleware(req: NextRequest) {
   // special case for `digimoda.xyz` domain
   if (hostname === "digimoda.xyz") {
     return NextResponse.redirect(
-      "https://vercel.com/blog/platforms-starter-kit",
+      "https://digimoda.xyz/home",
     );
   }
 

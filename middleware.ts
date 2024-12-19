@@ -51,13 +51,6 @@ export default async function middleware(req: NextRequest) {
     );
   }
 
-  // special case for `digimoda.xyz` domain
-  if (hostname === "digimoda.xyz") {
-    return NextResponse.redirect(
-      "https://digimoda.xyz/home",
-    );
-  }
-
   // rewrite root application to `/home` folder
   if (
     hostname === "localhost:3000" ||

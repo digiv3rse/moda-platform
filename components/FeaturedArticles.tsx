@@ -1,27 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const articles = [
   {
     id: 1,
-    title:
-      "Paris Fashion Week’s Spring/Summer 2025 Runways Were Filled With These 6 Trends",
-    image:
-      "https://digimoda.site/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F0giprylc%2Fdigimoda%2F9317287d3a7ef016d066bdf04cd7e76b9c82b295-768x575.jpg%3Fw%3D768%26auto%3Dformat&w=1080&q=75",
+    title: "Paris Fashion Week’s Spring/Summer 2025 Runways Were Filled With These 6 Trends",
+    image: "/paris-fashion.jpg",
     category: "Fashion",
+    url: "https://digimoda.site/post/paris-fashion-week-s-spring-summer-2025-runways-were-filled-with-these-6-trends",
   },
   {
     id: 2,
     title: "Rick Owens's Best Look in Street Style",
-    image:
-      "https://digimoda.site/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F0giprylc%2Fdigimoda%2F0b4ab026e4e972169db7f89c9cdc944199d75f16-1512x1096.jpg%3Frect%3D0%2C0%2C1512%2C822%26w%3D1512%26auto%3Dformat&w=1080&q=75",
+    image: "/rick-owen.jpg",
     category: "Fashion",
+    url: "https://digimoda.site/post/rick-owens-s-best-look-in-street-style",
   },
   {
     id: 3,
     title: "Selena Gomez Finds the Key to a Perfect Red Carpet LBD | Vogue",
-    image:
-      "https://digimoda.site/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2F0giprylc%2Fdigimoda%2F3bc8659c4727a5c682d9f30c1c23afce9a1993e7-4096x3052.jpg%3Fw%3D2000%26auto%3Dformat&w=1080&q=75",
+    image: "/selena-gomez.jpg",
     category: "Fashion",
+    url: "https://digimoda.site/post/selena-gomez-finds-the-key-to-a-perfect-red-carpet-lbd-or-vogue",
   },
 ];
 
@@ -53,9 +53,11 @@ export default function FeaturedArticles() {
                   <h3 className="mb-4 mt-2 text-xl font-bold">
                     {article.title}
                   </h3>
-                  <button className="font-semibold text-purple-600 hover:text-purple-800">
-                    Read More →
-                  </button>
+                  <Link href={article.url}>
+                    <button className="font-semibold text-purple-600 hover:text-purple-800">
+                      Read More →
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
